@@ -41,3 +41,4 @@ backend/test_mongo.py
 frontend/build/
 frontend/.env
 backend/.env
+.emergent/
