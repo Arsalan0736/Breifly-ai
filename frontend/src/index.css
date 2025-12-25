@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neo-black: #000000;
+    --neo-white: #ffffff;
+    --neo-lime: #ccff00;
+    --neo-cyan: #00ffff;
+    --neo-yellow: #ffeb3b;
+    --neo-pink: #ff90e8;
+    --neo-lavender: #e0ccff;
+    --neo-muted: #f0f0f0;
+    --bg-main: #fffdf5;
+
+    /* Shadcn UI Variables */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+    --radius: 0.75rem;
+  }
+
+  body {
+    @apply bg-bg-main text-neo-black font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .neo-card {
+    @apply bg-white border-[3px] border-neo-black rounded-xl shadow-neo p-6 transition-all duration-200;
+  }
+
+  .neo-card-hover {
+    @apply hover:shadow-neo-hover hover:-translate-y-1 hover:bg-neo-muted;
+  }
+
+  .neo-button-primary {
+    @apply bg-neo-black text-white font-bold border-[3px] border-neo-black rounded-lg shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:translate-x-[4px] active:translate-y-[4px];
+  }
+
+  .neo-button-secondary {
+    @apply bg-white text-neo-black font-bold border-[3px] border-neo-black rounded-lg shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:translate-x-[4px] active:translate-y-[4px];
+  }
+
+  .neo-button-accent {
+    @apply bg-neo-lime text-neo-black font-bold border-[3px] border-neo-black rounded-lg shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:translate-x-[4px] active:translate-y-[4px];
+  }
+
+  .neo-input {
+    @apply border-[3px] border-neo-black rounded-lg px-4 py-2 focus:ring-0 focus:outline-none focus:shadow-neo transition-all placeholder:text-neo-black;
+  }
+
+  .neo-badge {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full border-2 border-neo-black font-bold text-sm;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .shadow-neo {
+    box-shadow: 5px 5px 0px 0px var(--neo-black);
+  }
+
+  .shadow-neo-hover {
+    box-shadow: 8px 8px 0px 0px var(--neo-black);
+  }
+
+  .text-neo-black {
+    color: var(--neo-black);
+  }
+
+  .bg-neo-lime {
+    background-color: var(--neo-lime);
+  }
+
+  .bg-neo-cyan {
+    background-color: var(--neo-cyan);
+  }
+
+  .bg-neo-yellow {
+    background-color: var(--neo-yellow);
+  }
+
+  .bg-neo-pink {
+    background-color: var(--neo-pink);
+  }
+
+  .bg-neo-lavender {
+    background-color: var(--neo-lavender);
+  }
+
+  .bg-neo-muted {
+    background-color: var(--neo-muted);
+  }
+
+  .bg-bg-main {
+    background-color: var(--bg-main);
+  }
+
+  .border-neo-black {
+    border-color: var(--neo-black);
+  }
+
+  .bg-neo-pink-light {
+    background-color: #fff0f9;
+  }
+}

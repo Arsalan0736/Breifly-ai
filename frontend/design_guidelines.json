@@ -1,0 +1,138 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Designer",
+    "style": "Neubrutalism",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is King",
+      "Zoom In",
+      "Negative Space",
+      "Contrast"
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Lexend Mega",
+        "url": "https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap",
+        "weights": ["700", "800", "900"],
+        "usage": "All headings (h1-h6), hero text, big numbers"
+      },
+      "body": {
+        "family": "Public Sans",
+        "url": "https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap",
+        "weights": ["400", "500", "600"],
+        "usage": "Paragraphs, UI labels, inputs, buttons"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap",
+        "weights": ["400", "500"],
+        "usage": "Code snippets, data values, technical details"
+      }
+    },
+    "rules": [
+      "Headings MUST be bold (font-bold or font-black).",
+      "Headings MUST use tight tracking (tracking-tight or tracking-tighter).",
+      "Body text should be readable with relaxed leading (leading-relaxed).",
+      "NEVER use Inter for headings."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#FDFBF7",
+      "foreground": "#0f0f0f",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "accent_lime": "#A3E635",
+      "accent_cyan": "#67E8F9",
+      "accent_pink": "#F472B6",
+      "accent_yellow": "#FCD34D",
+      "accent_lavender": "#E9D5FF",
+      "border": "#000000",
+      "muted": "#F3F4F6"
+    },
+    "tailwind_config": {
+      "colors": {
+        "bg-main": "#FDFBF7",
+        "neo-black": "#000000",
+        "neo-white": "#FFFFFF",
+        "neo-lime": "#A3E635",
+        "neo-cyan": "#67E8F9",
+        "neo-pink": "#F472B6",
+        "neo-yellow": "#FCD34D",
+        "neo-lavender": "#E9D5FF"
+      }
+    },
+    "usage": {
+      "background": "bg-bg-main",
+      "text": "text-neo-black",
+      "borders": "border-neo-black",
+      "primary_cta": "bg-neo-black text-neo-white hover:bg-neo-black/90",
+      "secondary_cta": "bg-neo-white text-neo-black border-2 border-neo-black hover:bg-neo-muted"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "hard": "4px 4px 0px 0px #000000",
+      "hard_sm": "2px 2px 0px 0px #000000",
+      "hard_lg": "8px 8px 0px 0px #000000",
+      "tailwind_class": "shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+    },
+    "borders": {
+      "thick": "border-2 border-black",
+      "thicker": "border-4 border-black",
+      "radius": "rounded-xl"
+    },
+    "textures": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "components": {
+    "buttons": {
+      "base": "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+      "primary": "bg-neo-black text-white border-2 border-neo-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none",
+      "secondary": "bg-white text-neo-black border-2 border-neo-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none",
+      "ghost": "hover:bg-neo-black/5 text-neo-black"
+    },
+    "cards": {
+      "base": "bg-white border-2 border-neo-black rounded-xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] p-6",
+      "hover": "hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
+    },
+    "inputs": {
+      "base": "flex h-12 w-full rounded-lg border-2 border-neo-black bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "layout": {
+    "container": "container mx-auto px-4 md:px-6",
+    "section_spacing": "py-16 md:py-24 lg:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+    "grid_hero": "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+  },
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1564518534518-e79657852a1a?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "problem_chaos": "https://images.unsplash.com/photo-1701576766277-c6160505581d?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "solution_order": "https://images.unsplash.com/photo-1655988940601-7702d8685f95?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "team_collab": "https://images.unsplash.com/photo-1565688720651-d0d042946c5c?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "workspace_minimal": "https://images.unsplash.com/photo-1648949913621-028d46daab81?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add the Google Fonts links to the index.html or import them in index.css immediately.",
+    "2. CONFIGURE TAILWIND: Update tailwind.config.js to include the 'neo' colors and 'Lexend Mega'/'Public Sans' font families.",
+    "3. OVERRIDE SHADCN: When using Shadcn components, YOU MUST override their default styles to match the 'Neubrutalism' rules (thick borders, hard shadows). Do not use the default subtle styles.",
+    "4. USE LUCIDE ICONS: Use lucide-react for all icons. Keep them bold (stroke-width={2.5} or {3}).",
+    "5. NO GRADIENTS: Do not use gradients for backgrounds. Use solid bold colors or the noise texture.",
+    "6. DATA-TESTID: Add data-testid to all interactive elements.",
+    "7. ANIMATIONS: Use 'framer-motion' for entrance animations. Elements should slide up and fade in with a spring physics feel.",
+    "8. MARQUEE: Use 'react-fast-marquee' for the client logos section."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI slop' - generic, centered, low-contrast designs.",
+    "Use 2-3x more spacing than typical.",
+    "Every interaction needs a micro-animation (hover, click).",
+    "Don't ask the user for clarification. Make decisions.",
+    "If a flow is missing (e.g., auth), mock it or build a simple version."
+  ]
+}
